@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scraping Reddit</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="header-container">
+        <h1>APLIKASI DETEKSI HATE SPEECH</h1>
+    </div>
+
+    <div class="form-container">
+        <form id="form-url">
+            <div class="form-group">
+                <input required type="text" name="url" id="url" placeholder="Masukkan url...">
+            </div>
+            <div class="form-group">
+                <button>Kirim</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="data-container">
+        <div class="sub-data comment-container">
+            <strong id="comment-data">0</strong>
+            <p>Total Container</p>
+        </div>
+        <div class="sub-data hate-container">
+            <strong id="hate-data">0</strong>
+            <p>Hate Speech</p>
+        </div>
+        <div class="sub-data non-hate-container">
+            <strong id="non-hate-data">0</strong>
+            <p>Non Hate Speech</p>
+        </div>
+    </div>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <th>
+                    <td>No</td>
+                    <td>Komentar</td>
+                    <td>Waktu dibuat</td>
+                </th>
+            </thead>
+            <tbody id="data-scraping">
+            </tbody>
+        </table>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
