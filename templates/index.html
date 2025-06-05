@@ -14,7 +14,7 @@
     <div class="form-container">
         <form id="form-url">
             <div class="form-group">
-                <input required type="text" name="url" id="url" placeholder="Masukkan url...">
+                <input autofocus required type="text" name="url" id="url" placeholder="Masukkan url...">
             </div>
             <div class="form-group">
                 <button>Kirim</button>
@@ -24,8 +24,8 @@
 
     <div class="data-container">
         <div class="sub-data comment-container">
-            <strong id="comment-data">0</strong>
-            <p>Total Container</p>
+            <strong id="total-comment">0</strong>
+            <p>Total Komentar</p>
         </div>
         <div class="sub-data hate-container">
             <strong id="hate-data">0</strong>
@@ -38,19 +38,22 @@
     </div>
 
     <div class="table-container">
-        <table>
+        <table id="data-scraping">
             <thead>
-                <th>
-                    <td>No</td>
-                    <td>Komentar</td>
-                    <td>Waktu dibuat</td>
-                </th>
+                <tr>
+                    <th>No</th>
+                    <th>Author</th>
+                    <th width="50%">Komentar</th>
+                    <th>Waktu dibuat</th>
+                    <th>Label</th>
+                </tr>
             </thead>
-            <tbody id="data-scraping">
+            <tbody>
             </tbody>
         </table>
     </div>
 
+    <script src="/static/js/axios.min.js"></script>
     <script src="/static/js/script.js"></script>
 </body>
 </html>
