@@ -31,9 +31,9 @@ def getRedditData(redditUrl: str):
 
     # if(tanngalPostingan.year > 2021 and tanngalPostingan.year < 2024) :
     if (tanngalPostingan.year < 2021):
-        raise ValueError("Tahun postingan dibawah 2021")
+        raise ValueError("Post year under 2021")
     elif(tanngalPostingan.year > 2024) :
-        raise ValueError("Tahun postingan diatas 2024")
+        raise ValueError("Post year more than 2024")
     else:
         submission.comments.replace_more(limit=0)
         comments = submission.comments.list()  

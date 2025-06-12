@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, jsonify
-# import prawcore
+from prawcore import exceptions as pcExcp
+from praw import exceptions as prawExcp
 import re
 
 from core.logic import getRedditData
@@ -19,7 +20,7 @@ def home():
             r'^(https?:\/\/)[\w\-\.]+(\.[\w\-]+)+([\/\w\-\.\?\=\&\#]*)*$', re.IGNORECASE
         )
         if not URL_REGEX.match(url):
-            return jsonify({"error":"url tidak valid"}), 400
+            return jsonify({"error":"URL tidak valid"}), 400
 
         # return jsonify(dataJson)
         try:
@@ -37,7 +38,10 @@ def home():
             return jsonify({
                 "error": str(e),
             }), 500
-        # except prawcore.exceptions.Forbidden as e:
+        except prawExcp.InvalidURL as e:
+            return jsonify({
+                "error": str(e),
+            }), 500
 
 
 if __name__ == '__main__':

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang=en>
   <head>
-    <title>RuntimeError: Expected tensor for argument #1 &#39;indices&#39; to have one of the following scalar types: Long, Int; but got torch.FloatTensor instead (while checking arguments for embedding)
+    <title>praw.exceptions.InvalidURL: Invalid URL: https://www.youtube.com
  // Werkzeug Debugger</title>
     <link rel="stylesheet" href="?__debugger__=yes&amp;cmd=resource&amp;f=style.css">
     <link rel="shortcut icon"
@@ -11,20 +11,20 @@
       var CONSOLE_MODE = false,
           EVALEX = true,
           EVALEX_TRUSTED = false,
-          SECRET = "7xnA4LU4v1kczo4z1Rrv";
+          SECRET = "7cxhWpX7Wu979wb55XWI";
     </script>
   </head>
   <body style="background-color: #fff">
     <div class="debugger">
-<h1>RuntimeError</h1>
+<h1>InvalidURL</h1>
 <div class="detail">
-  <p class="errormsg">RuntimeError: Expected tensor for argument #1 &#39;indices&#39; to have one of the following scalar types: Long, Int; but got torch.FloatTensor instead (while checking arguments for embedding)
+  <p class="errormsg">praw.exceptions.InvalidURL: Invalid URL: https://www.youtube.com
 </p>
 </div>
 <h2 class="traceback">Traceback <em>(most recent call last)</em></h2>
 <div class="traceback">
   <h3></h3>
-  <ul><li><div class="frame" id="frame-1843386537520">
+  <ul><li><div class="frame" id="frame-1543720251984">
   <h4>File <cite class="filename">"C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py"</cite>,
       line <em class="line">1536</em>,
       in <code class="function">__call__</code></h4>
@@ -37,7 +37,7 @@
 <span class="ws">        </span>       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre></div>
 </div>
 
-<li><div class="frame" id="frame-1843386538384">
+<li><div class="frame" id="frame-1543720251552">
   <h4>File <cite class="filename">"C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py"</cite>,
       line <em class="line">1514</em>,
       in <code class="function">wsgi_app</code></h4>
@@ -55,7 +55,7 @@
 <pre class="line after"><span class="ws">        </span>finally:</pre></div>
 </div>
 
-<li><div class="frame" id="frame-1843386538528">
+<li><div class="frame" id="frame-1543720251696">
   <h4>File <cite class="filename">"C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py"</cite>,
       line <em class="line">1511</em>,
       in <code class="function">wsgi_app</code></h4>
@@ -73,7 +73,7 @@
 <pre class="line after"><span class="ws">                </span>error = sys.exc_info()[1]</pre></div>
 </div>
 
-<li><div class="frame" id="frame-1843386538672">
+<li><div class="frame" id="frame-1543720252704">
   <h4>File <cite class="filename">"C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py"</cite>,
       line <em class="line">919</em>,
       in <code class="function">full_dispatch_request</code></h4>
@@ -91,7 +91,7 @@
 <pre class="line after"><span class="ws">        </span>rv: ft.ResponseReturnValue | HTTPException,</pre></div>
 </div>
 
-<li><div class="frame" id="frame-1843386538816">
+<li><div class="frame" id="frame-1543720252848">
   <h4>File <cite class="filename">"C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py"</cite>,
       line <em class="line">917</em>,
       in <code class="function">full_dispatch_request</code></h4>
@@ -109,7 +109,7 @@
 <pre class="line after"><span class="ws">    </span>def finalize_request(</pre></div>
 </div>
 
-<li><div class="frame" id="frame-1843386538960">
+<li><div class="frame" id="frame-1543720252992">
   <h4>File <cite class="filename">"C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py"</cite>,
       line <em class="line">902</em>,
       in <code class="function">dispatch_request</code></h4>
@@ -127,7 +127,7 @@
 <pre class="line after"><span class="ws">        </span>error handling.</pre></div>
 </div>
 
-<li><div class="frame" id="frame-1843386539104">
+<li><div class="frame" id="frame-1543720253136">
   <h4>File <cite class="filename">"D:\Semester-8\Projek Khoir\app.py"</cite>,
       line <em class="line">26</em>,
       in <code class="function">home</code></h4>
@@ -145,275 +145,96 @@
 <pre class="line after"><span class="ws">            </span>return jsonify({</pre></div>
 </div>
 
-<li><div class="frame" id="frame-1843386539248">
+<li><div class="frame" id="frame-1543720253280">
   <h4>File <cite class="filename">"D:\Semester-8\Projek Khoir\core\logic.py"</cite>,
-      line <em class="line">51</em>,
+      line <em class="line">28</em>,
       in <code class="function">getRedditData</code></h4>
-  <div class="source "><pre class="line before"><span class="ws">                </span>&#39;created_at&#39; : (datetime.datetime.fromtimestamp(comment.created_utc)).strftime(&#39;%Y-%m-%d %H:%M:%S&#39;),</pre>
-<pre class="line before"><span class="ws">            </span>})</pre>
-<pre class="line before"><span class="ws">        </span>komentar_list = [comment for comment in komentar_list if comment[&#39;body&#39;].strip() != &#39;&#39;]</pre>
+  <div class="source "><pre class="line before"><span class="ws">    </span># Ambil submission dari subreddit</pre>
+<pre class="line before"><span class="ws">    </span># subreddit = reddit.subreddit(&#39;indonesia&#39;)  # Ganti sesuai kebutuhan</pre>
+<pre class="line before"><span class="ws">    </span># urlLink = &#39;https://www.reddit.com/r/indonesia/comments/bsimrn/prediksi_saya_mengenai_perpolitikan_indonesia/&#39;</pre>
+<pre class="line before"><span class="ws">    </span># urlLink = &#39;https://www.reddit.com/r/indonesia/comments/1h6a0a5/asli_kasus_terplot_twist_tahun_ini_udah_curiga/&#39;</pre>
 <pre class="line before"><span class="ws"></span> </pre>
-<pre class="line before"><span class="ws">        </span>bodyComments = [preprocess_text(comment[&#39;body&#39;]) for comment in komentar_list]</pre>
-<pre class="line current"><span class="ws">        </span>labelComments = [handleClassification(comment) for comment in bodyComments]
-<span class="ws">        </span>                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line current"><span class="ws">    </span>submission = reddit.submission(url=redditUrl)  # Ganti sesuai kebutuhan
+<span class="ws">    </span>             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
 <pre class="line after"><span class="ws"></span> </pre>
-<pre class="line after"><span class="ws">        </span>komentar_list = [{**c, &#39;label&#39;: l} for c, l in zip(komentar_list, labelComments)]</pre>
+<pre class="line after"><span class="ws">    </span>tanngalPostingan = datetime.datetime.fromtimestamp(submission.created_utc)</pre>
 <pre class="line after"><span class="ws"></span> </pre>
-<pre class="line after"><span class="ws">        </span># df = pd.DataFrame(labelComments)</pre>
-<pre class="line after"><span class="ws">        </span># df.to_excel(&#39;web_komentar2.xlsx&#39;, index=False)</pre></div>
+<pre class="line after"><span class="ws">    </span># if(tanngalPostingan.year &gt; 2021 and tanngalPostingan.year &lt; 2024) :</pre>
+<pre class="line after"><span class="ws">    </span>if (tanngalPostingan.year &lt; 2021):</pre></div>
 </div>
 
-<li><div class="frame" id="frame-1843386539392">
-  <h4>File <cite class="filename">"D:\Semester-8\Projek Khoir\core\svm.py"</cite>,
-      line <em class="line">10</em>,
-      in <code class="function">handleClassification</code></h4>
-  <div class="source "><pre class="line before"><span class="ws"></span>tokenizer = AutoTokenizer.from_pretrained(model_name)</pre>
-<pre class="line before"><span class="ws"></span>model = AutoModelForSequenceClassification.from_pretrained(model_name)</pre>
+<li><div class="frame" id="frame-1543720253424">
+  <h4>File <cite class="filename">"C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\praw\util\deprecate_args.py"</cite>,
+      line <em class="line">46</em>,
+      in <code class="function">wrapped</code></h4>
+  <div class="source "><pre class="line before"><span class="ws">                    </span>f&#34;Positional arguments for {func.__qualname__!r} will no longer be&#34;</pre>
+<pre class="line before"><span class="ws">                    </span>f&#34; supported in PRAW 8.\nCall this function with {arg_string}.&#34;,</pre>
+<pre class="line before"><span class="ws">                    </span>DeprecationWarning,</pre>
+<pre class="line before"><span class="ws">                    </span>stacklevel=2,</pre>
+<pre class="line before"><span class="ws">                </span>)</pre>
+<pre class="line current"><span class="ws">            </span>return func(**dict(zip(_old_args, args)), **kwargs)
+<span class="ws">            </span>       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">        </span>return wrapped</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">    </span>return wrapper</pre></div>
+</div>
+
+<li><div class="frame" id="frame-1543720253568">
+  <h4>File <cite class="filename">"C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\praw\reddit.py"</cite>,
+      line <em class="line">1005</em>,
+      in <code class="function">submission</code></h4>
+  <div class="source "><pre class="line before"><span class="ws">        </span>Either ``id`` or ``url`` can be provided, but not both.</pre>
 <pre class="line before"><span class="ws"></span> </pre>
-<pre class="line before"><span class="ws"></span>def handleClassification(text):</pre>
-<pre class="line before"><span class="ws">    </span>inputs = tokenizer(text, return_tensors=&#34;pt&#34;, truncation=True, padding=True, max_length=512)</pre>
-<pre class="line current"><span class="ws">    </span>outputs = model(**inputs)
-<span class="ws">    </span>          ^^^^^^^^^^^^^^^</pre>
-<pre class="line after"><span class="ws">    </span>probs = torch.nn.functional.softmax(outputs.logits, dim=1)</pre>
-<pre class="line after"><span class="ws">    </span>pred = torch.argmax(probs, dim=1).item()</pre>
-<pre class="line after"><span class="ws">    </span>return 0 if pred == 0 else 1</pre></div>
-</div>
-
-<li><div class="frame" id="frame-1843386539536">
-  <h4>File <cite class="filename">"C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\module.py"</cite>,
-      line <em class="line">1751</em>,
-      in <code class="function">_wrapped_call_impl</code></h4>
-  <div class="source "><pre class="line before"><span class="ws"></span> </pre>
-<pre class="line before"><span class="ws">    </span>def _wrapped_call_impl(self, *args, **kwargs):</pre>
-<pre class="line before"><span class="ws">        </span>if self._compiled_call_impl is not None:</pre>
-<pre class="line before"><span class="ws">            </span>return self._compiled_call_impl(*args, **kwargs)  # type: ignore[misc]</pre>
-<pre class="line before"><span class="ws">        </span>else:</pre>
-<pre class="line current"><span class="ws">            </span>return self._call_impl(*args, **kwargs)
-<span class="ws">            </span>       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
-<pre class="line after"><span class="ws"></span> </pre>
-<pre class="line after"><span class="ws">    </span># torchrec tests the code consistency with the following code</pre>
-<pre class="line after"><span class="ws">    </span># fmt: off</pre>
-<pre class="line after"><span class="ws">    </span>def _call_impl(self, *args, **kwargs):</pre>
-<pre class="line after"><span class="ws">        </span>forward_call = (self._slow_forward if torch._C._get_tracing_state() else self.forward)</pre></div>
-</div>
-
-<li><div class="frame" id="frame-1843389931600">
-  <h4>File <cite class="filename">"C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\module.py"</cite>,
-      line <em class="line">1762</em>,
-      in <code class="function">_call_impl</code></h4>
-  <div class="source "><pre class="line before"><span class="ws">        </span># If we don&#39;t have any hooks, we want to skip the rest of the logic in</pre>
-<pre class="line before"><span class="ws">        </span># this function, and just call forward.</pre>
-<pre class="line before"><span class="ws">        </span>if not (self._backward_hooks or self._backward_pre_hooks or self._forward_hooks or self._forward_pre_hooks</pre>
-<pre class="line before"><span class="ws">                </span>or _global_backward_pre_hooks or _global_backward_hooks</pre>
-<pre class="line before"><span class="ws">                </span>or _global_forward_hooks or _global_forward_pre_hooks):</pre>
-<pre class="line current"><span class="ws">            </span>return forward_call(*args, **kwargs)
-<span class="ws">            </span>       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
-<pre class="line after"><span class="ws"></span> </pre>
-<pre class="line after"><span class="ws">        </span>result = None</pre>
-<pre class="line after"><span class="ws">        </span>called_always_called_hooks = set()</pre>
-<pre class="line after"><span class="ws"></span> </pre>
-<pre class="line after"><span class="ws">        </span>def inner():</pre></div>
-</div>
-
-<li><div class="frame" id="frame-1843389931744">
-  <h4>File <cite class="filename">"C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\transformers\models\roberta\modeling_roberta.py"</cite>,
-      line <em class="line">1202</em>,
-      in <code class="function">forward</code></h4>
-  <div class="source "><pre class="line before"><span class="ws">            </span>config.num_labels - 1]`. If `config.num_labels == 1` a regression loss is computed (Mean-Square loss), If</pre>
-<pre class="line before"><span class="ws">            </span>`config.num_labels &gt; 1` a classification loss is computed (Cross-Entropy).</pre>
 <pre class="line before"><span class="ws">        </span>&#34;&#34;&#34;</pre>
-<pre class="line before"><span class="ws">        </span>return_dict = return_dict if return_dict is not None else self.config.use_return_dict</pre>
-<pre class="line before"><span class="ws"></span> </pre>
-<pre class="line current"><span class="ws">        </span>outputs = self.roberta(
-<span class="ws">        </span>          </pre>
-<pre class="line after"><span class="ws">            </span>input_ids,</pre>
-<pre class="line after"><span class="ws">            </span>attention_mask=attention_mask,</pre>
-<pre class="line after"><span class="ws">            </span>token_type_ids=token_type_ids,</pre>
-<pre class="line after"><span class="ws">            </span>position_ids=position_ids,</pre>
-<pre class="line after"><span class="ws">            </span>head_mask=head_mask,</pre></div>
+<pre class="line before"><span class="ws">        </span>if url:</pre>
+<pre class="line before"><span class="ws">            </span>url = self._resolve_share_url(url)</pre>
+<pre class="line current"><span class="ws">        </span>return models.Submission(self, id=id, url=url)
+<span class="ws">        </span>       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">    </span>def username_available(self, name: str) -&gt; bool:</pre>
+<pre class="line after"><span class="ws">        </span>&#34;&#34;&#34;Check to see if the username is available.</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">        </span>For example, to check if the username ``bboe`` is available, try:</pre></div>
 </div>
 
-<li><div class="frame" id="frame-1843390075312">
-  <h4>File <cite class="filename">"C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\module.py"</cite>,
-      line <em class="line">1751</em>,
-      in <code class="function">_wrapped_call_impl</code></h4>
+<li><div class="frame" id="frame-1543720253712">
+  <h4>File <cite class="filename">"C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\praw\models\reddit\submission.py"</cite>,
+      line <em class="line">605</em>,
+      in <code class="function">__init__</code></h4>
+  <div class="source "><pre class="line before"><span class="ws">        </span>self.comment_sort = &#34;confidence&#34;</pre>
+<pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">        </span>if id:</pre>
+<pre class="line before"><span class="ws">            </span>self.id = id</pre>
+<pre class="line before"><span class="ws">        </span>elif url:</pre>
+<pre class="line current"><span class="ws">            </span>self.id = self.id_from_url(url)
+<span class="ws">            </span>          ^^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">        </span>super().__init__(reddit, _data=_data)</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">        </span>self._additional_fetch_params = {}</pre>
+<pre class="line after"><span class="ws">        </span>self._comments_by_id = {}</pre></div>
+</div>
+
+<li><div class="frame" id="frame-1543720253856">
+  <h4>File <cite class="filename">"C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\praw\models\reddit\submission.py"</cite>,
+      line <em class="line">494</em>,
+      in <code class="function">id_from_url</code></h4>
   <div class="source "><pre class="line before"><span class="ws"></span> </pre>
-<pre class="line before"><span class="ws">    </span>def _wrapped_call_impl(self, *args, **kwargs):</pre>
-<pre class="line before"><span class="ws">        </span>if self._compiled_call_impl is not None:</pre>
-<pre class="line before"><span class="ws">            </span>return self._compiled_call_impl(*args, **kwargs)  # type: ignore[misc]</pre>
 <pre class="line before"><span class="ws">        </span>else:</pre>
-<pre class="line current"><span class="ws">            </span>return self._call_impl(*args, **kwargs)
-<span class="ws">            </span>       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
-<pre class="line after"><span class="ws"></span> </pre>
-<pre class="line after"><span class="ws">    </span># torchrec tests the code consistency with the following code</pre>
-<pre class="line after"><span class="ws">    </span># fmt: off</pre>
-<pre class="line after"><span class="ws">    </span>def _call_impl(self, *args, **kwargs):</pre>
-<pre class="line after"><span class="ws">        </span>forward_call = (self._slow_forward if torch._C._get_tracing_state() else self.forward)</pre></div>
-</div>
-
-<li><div class="frame" id="frame-1843390075456">
-  <h4>File <cite class="filename">"C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\module.py"</cite>,
-      line <em class="line">1762</em>,
-      in <code class="function">_call_impl</code></h4>
-  <div class="source "><pre class="line before"><span class="ws">        </span># If we don&#39;t have any hooks, we want to skip the rest of the logic in</pre>
-<pre class="line before"><span class="ws">        </span># this function, and just call forward.</pre>
-<pre class="line before"><span class="ws">        </span>if not (self._backward_hooks or self._backward_pre_hooks or self._forward_hooks or self._forward_pre_hooks</pre>
-<pre class="line before"><span class="ws">                </span>or _global_backward_pre_hooks or _global_backward_hooks</pre>
-<pre class="line before"><span class="ws">                </span>or _global_forward_hooks or _global_forward_pre_hooks):</pre>
-<pre class="line current"><span class="ws">            </span>return forward_call(*args, **kwargs)
-<span class="ws">            </span>       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
-<pre class="line after"><span class="ws"></span> </pre>
-<pre class="line after"><span class="ws">        </span>result = None</pre>
-<pre class="line after"><span class="ws">        </span>called_always_called_hooks = set()</pre>
-<pre class="line after"><span class="ws"></span> </pre>
-<pre class="line after"><span class="ws">        </span>def inner():</pre></div>
-</div>
-
-<li><div class="frame" id="frame-1843390075600">
-  <h4>File <cite class="filename">"C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\transformers\models\roberta\modeling_roberta.py"</cite>,
-      line <em class="line">805</em>,
-      in <code class="function">forward</code></h4>
-  <div class="source "><pre class="line before"><span class="ws">                </span>buffered_token_type_ids_expanded = buffered_token_type_ids.expand(batch_size, seq_length)</pre>
-<pre class="line before"><span class="ws">                </span>token_type_ids = buffered_token_type_ids_expanded</pre>
-<pre class="line before"><span class="ws">            </span>else:</pre>
-<pre class="line before"><span class="ws">                </span>token_type_ids = torch.zeros(input_shape, dtype=torch.long, device=device)</pre>
+<pre class="line before"><span class="ws">            </span>submission_id = parts[parts.index(&#34;comments&#34;) + 1]</pre>
 <pre class="line before"><span class="ws"></span> </pre>
-<pre class="line current"><span class="ws">        </span>embedding_output = self.embeddings(
-<span class="ws">        </span>                   </pre>
-<pre class="line after"><span class="ws">            </span>input_ids=input_ids,</pre>
-<pre class="line after"><span class="ws">            </span>position_ids=position_ids,</pre>
-<pre class="line after"><span class="ws">            </span>token_type_ids=token_type_ids,</pre>
-<pre class="line after"><span class="ws">            </span>inputs_embeds=inputs_embeds,</pre>
-<pre class="line after"><span class="ws">            </span>past_key_values_length=past_key_values_length,</pre></div>
-</div>
-
-<li><div class="frame" id="frame-1843390075744">
-  <h4>File <cite class="filename">"C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\module.py"</cite>,
-      line <em class="line">1751</em>,
-      in <code class="function">_wrapped_call_impl</code></h4>
-  <div class="source "><pre class="line before"><span class="ws"></span> </pre>
-<pre class="line before"><span class="ws">    </span>def _wrapped_call_impl(self, *args, **kwargs):</pre>
-<pre class="line before"><span class="ws">        </span>if self._compiled_call_impl is not None:</pre>
-<pre class="line before"><span class="ws">            </span>return self._compiled_call_impl(*args, **kwargs)  # type: ignore[misc]</pre>
-<pre class="line before"><span class="ws">        </span>else:</pre>
-<pre class="line current"><span class="ws">            </span>return self._call_impl(*args, **kwargs)
-<span class="ws">            </span>       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line before"><span class="ws">        </span>if not submission_id.isalnum():</pre>
+<pre class="line current"><span class="ws">            </span>raise InvalidURL(url)
+<span class="ws">            </span>^^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws">        </span>return submission_id</pre>
 <pre class="line after"><span class="ws"></span> </pre>
-<pre class="line after"><span class="ws">    </span># torchrec tests the code consistency with the following code</pre>
-<pre class="line after"><span class="ws">    </span># fmt: off</pre>
-<pre class="line after"><span class="ws">    </span>def _call_impl(self, *args, **kwargs):</pre>
-<pre class="line after"><span class="ws">        </span>forward_call = (self._slow_forward if torch._C._get_tracing_state() else self.forward)</pre></div>
-</div>
-
-<li><div class="frame" id="frame-1843390075888">
-  <h4>File <cite class="filename">"C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\module.py"</cite>,
-      line <em class="line">1762</em>,
-      in <code class="function">_call_impl</code></h4>
-  <div class="source "><pre class="line before"><span class="ws">        </span># If we don&#39;t have any hooks, we want to skip the rest of the logic in</pre>
-<pre class="line before"><span class="ws">        </span># this function, and just call forward.</pre>
-<pre class="line before"><span class="ws">        </span>if not (self._backward_hooks or self._backward_pre_hooks or self._forward_hooks or self._forward_pre_hooks</pre>
-<pre class="line before"><span class="ws">                </span>or _global_backward_pre_hooks or _global_backward_hooks</pre>
-<pre class="line before"><span class="ws">                </span>or _global_forward_hooks or _global_forward_pre_hooks):</pre>
-<pre class="line current"><span class="ws">            </span>return forward_call(*args, **kwargs)
-<span class="ws">            </span>       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
-<pre class="line after"><span class="ws"></span> </pre>
-<pre class="line after"><span class="ws">        </span>result = None</pre>
-<pre class="line after"><span class="ws">        </span>called_always_called_hooks = set()</pre>
-<pre class="line after"><span class="ws"></span> </pre>
-<pre class="line after"><span class="ws">        </span>def inner():</pre></div>
-</div>
-
-<li><div class="frame" id="frame-1843390076032">
-  <h4>File <cite class="filename">"C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\transformers\models\roberta\modeling_roberta.py"</cite>,
-      line <em class="line">109</em>,
-      in <code class="function">forward</code></h4>
-  <div class="source "><pre class="line before"><span class="ws">                </span>token_type_ids = buffered_token_type_ids_expanded</pre>
-<pre class="line before"><span class="ws">            </span>else:</pre>
-<pre class="line before"><span class="ws">                </span>token_type_ids = torch.zeros(input_shape, dtype=torch.long, device=self.position_ids.device)</pre>
-<pre class="line before"><span class="ws"></span> </pre>
-<pre class="line before"><span class="ws">        </span>if inputs_embeds is None:</pre>
-<pre class="line current"><span class="ws">            </span>inputs_embeds = self.word_embeddings(input_ids)
-<span class="ws">            </span>                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
-<pre class="line after"><span class="ws">        </span>token_type_embeddings = self.token_type_embeddings(token_type_ids)</pre>
-<pre class="line after"><span class="ws"></span> </pre>
-<pre class="line after"><span class="ws">        </span>embeddings = inputs_embeds + token_type_embeddings</pre>
-<pre class="line after"><span class="ws">        </span>if self.position_embedding_type == &#34;absolute&#34;:</pre>
-<pre class="line after"><span class="ws">            </span>position_embeddings = self.position_embeddings(position_ids)</pre></div>
-</div>
-
-<li><div class="frame" id="frame-1843390076176">
-  <h4>File <cite class="filename">"C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\module.py"</cite>,
-      line <em class="line">1751</em>,
-      in <code class="function">_wrapped_call_impl</code></h4>
-  <div class="source "><pre class="line before"><span class="ws"></span> </pre>
-<pre class="line before"><span class="ws">    </span>def _wrapped_call_impl(self, *args, **kwargs):</pre>
-<pre class="line before"><span class="ws">        </span>if self._compiled_call_impl is not None:</pre>
-<pre class="line before"><span class="ws">            </span>return self._compiled_call_impl(*args, **kwargs)  # type: ignore[misc]</pre>
-<pre class="line before"><span class="ws">        </span>else:</pre>
-<pre class="line current"><span class="ws">            </span>return self._call_impl(*args, **kwargs)
-<span class="ws">            </span>       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
-<pre class="line after"><span class="ws"></span> </pre>
-<pre class="line after"><span class="ws">    </span># torchrec tests the code consistency with the following code</pre>
-<pre class="line after"><span class="ws">    </span># fmt: off</pre>
-<pre class="line after"><span class="ws">    </span>def _call_impl(self, *args, **kwargs):</pre>
-<pre class="line after"><span class="ws">        </span>forward_call = (self._slow_forward if torch._C._get_tracing_state() else self.forward)</pre></div>
-</div>
-
-<li><div class="frame" id="frame-1843390076320">
-  <h4>File <cite class="filename">"C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\module.py"</cite>,
-      line <em class="line">1762</em>,
-      in <code class="function">_call_impl</code></h4>
-  <div class="source "><pre class="line before"><span class="ws">        </span># If we don&#39;t have any hooks, we want to skip the rest of the logic in</pre>
-<pre class="line before"><span class="ws">        </span># this function, and just call forward.</pre>
-<pre class="line before"><span class="ws">        </span>if not (self._backward_hooks or self._backward_pre_hooks or self._forward_hooks or self._forward_pre_hooks</pre>
-<pre class="line before"><span class="ws">                </span>or _global_backward_pre_hooks or _global_backward_hooks</pre>
-<pre class="line before"><span class="ws">                </span>or _global_forward_hooks or _global_forward_pre_hooks):</pre>
-<pre class="line current"><span class="ws">            </span>return forward_call(*args, **kwargs)
-<span class="ws">            </span>       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
-<pre class="line after"><span class="ws"></span> </pre>
-<pre class="line after"><span class="ws">        </span>result = None</pre>
-<pre class="line after"><span class="ws">        </span>called_always_called_hooks = set()</pre>
-<pre class="line after"><span class="ws"></span> </pre>
-<pre class="line after"><span class="ws">        </span>def inner():</pre></div>
-</div>
-
-<li><div class="frame" id="frame-1843390076464">
-  <h4>File <cite class="filename">"C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\sparse.py"</cite>,
-      line <em class="line">190</em>,
-      in <code class="function">forward</code></h4>
-  <div class="source "><pre class="line before"><span class="ws">        </span>if self.padding_idx is not None:</pre>
-<pre class="line before"><span class="ws">            </span>with torch.no_grad():</pre>
-<pre class="line before"><span class="ws">                </span>self.weight[self.padding_idx].fill_(0)</pre>
-<pre class="line before"><span class="ws"></span> </pre>
-<pre class="line before"><span class="ws">    </span>def forward(self, input: Tensor) -&gt; Tensor:</pre>
-<pre class="line current"><span class="ws">        </span>return F.embedding(
-<span class="ws">        </span>       </pre>
-<pre class="line after"><span class="ws">            </span>input,</pre>
-<pre class="line after"><span class="ws">            </span>self.weight,</pre>
-<pre class="line after"><span class="ws">            </span>self.padding_idx,</pre>
-<pre class="line after"><span class="ws">            </span>self.max_norm,</pre>
-<pre class="line after"><span class="ws">            </span>self.norm_type,</pre></div>
-</div>
-
-<li><div class="frame" id="frame-1843390081216">
-  <h4>File <cite class="filename">"C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\functional.py"</cite>,
-      line <em class="line">2551</em>,
-      in <code class="function">embedding</code></h4>
-  <div class="source "><pre class="line before"><span class="ws">        </span># XXX: equivalent to</pre>
-<pre class="line before"><span class="ws">        </span># with torch.no_grad():</pre>
-<pre class="line before"><span class="ws">        </span>#   torch.embedding_renorm_</pre>
-<pre class="line before"><span class="ws">        </span># remove once script supports set_grad_enabled</pre>
-<pre class="line before"><span class="ws">        </span>_no_grad_embedding_renorm_(weight, input, max_norm, norm_type)</pre>
-<pre class="line current"><span class="ws">    </span>return torch.embedding(weight, input, padding_idx, scale_grad_by_freq, sparse)
-<span class="ws">    </span>       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
-<pre class="line after"><span class="ws"></span> </pre>
-<pre class="line after"><span class="ws"></span> </pre>
-<pre class="line after"><span class="ws"></span>def embedding_bag(</pre>
-<pre class="line after"><span class="ws">    </span>input: Tensor,</pre>
-<pre class="line after"><span class="ws">    </span>weight: Tensor,</pre></div>
+<pre class="line after"><span class="ws">    </span>@cachedproperty</pre>
+<pre class="line after"><span class="ws">    </span>def flair(self) -&gt; SubmissionFlair:</pre>
+<pre class="line after"><span class="ws">        </span>&#34;&#34;&#34;Provide an instance of :class:`.SubmissionFlair`.</pre></div>
 </div>
 </ul>
-  <blockquote>RuntimeError: Expected tensor for argument #1 &#39;indices&#39; to have one of the following scalar types: Long, Int; but got torch.FloatTensor instead (while checking arguments for embedding)
+  <blockquote>praw.exceptions.InvalidURL: Invalid URL: https://www.youtube.com
 </blockquote>
 </div>
 
@@ -443,52 +264,21 @@
   File &#34;D:\Semester-8\Projek Khoir\app.py&#34;, line 26, in home
     data = getRedditData(redditUrl=url)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &#34;D:\Semester-8\Projek Khoir\core\logic.py&#34;, line 51, in getRedditData
-    labelComments = [handleClassification(comment) for comment in bodyComments]
-                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &#34;D:\Semester-8\Projek Khoir\core\svm.py&#34;, line 10, in handleClassification
-    outputs = model(**inputs)
-              ^^^^^^^^^^^^^^^
-  File &#34;C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\module.py&#34;, line 1751, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &#34;C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\module.py&#34;, line 1762, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &#34;C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\transformers\models\roberta\modeling_roberta.py&#34;, line 1202, in forward
-    outputs = self.roberta(
-              ^^^^^^^^^^^^^
-  File &#34;C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\module.py&#34;, line 1751, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &#34;C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\module.py&#34;, line 1762, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &#34;C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\transformers\models\roberta\modeling_roberta.py&#34;, line 805, in forward
-    embedding_output = self.embeddings(
-                       ^^^^^^^^^^^^^^^^
-  File &#34;C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\module.py&#34;, line 1751, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &#34;C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\module.py&#34;, line 1762, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &#34;C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\transformers\models\roberta\modeling_roberta.py&#34;, line 109, in forward
-    inputs_embeds = self.word_embeddings(input_ids)
-                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &#34;C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\module.py&#34;, line 1751, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &#34;C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\module.py&#34;, line 1762, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &#34;C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\sparse.py&#34;, line 190, in forward
-    return F.embedding(
-           ^^^^^^^^^^^^
-  File &#34;C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\functional.py&#34;, line 2551, in embedding
-    return torch.embedding(weight, input, padding_idx, scale_grad_by_freq, sparse)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-RuntimeError: Expected tensor for argument #1 &#39;indices&#39; to have one of the following scalar types: Long, Int; but got torch.FloatTensor instead (while checking arguments for embedding)
+  File &#34;D:\Semester-8\Projek Khoir\core\logic.py&#34;, line 28, in getRedditData
+    submission = reddit.submission(url=redditUrl)  # Ganti sesuai kebutuhan
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\praw\util\deprecate_args.py&#34;, line 46, in wrapped
+    return func(**dict(zip(_old_args, args)), **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\praw\reddit.py&#34;, line 1005, in submission
+    return models.Submission(self, id=id, url=url)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\praw\models\reddit\submission.py&#34;, line 605, in __init__
+    self.id = self.id_from_url(url)
+              ^^^^^^^^^^^^^^^^^^^^^
+  File &#34;C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\praw\models\reddit\submission.py&#34;, line 494, in id_from_url
+    raise InvalidURL(url)
+praw.exceptions.InvalidURL: Invalid URL: https://www.youtube.com
 </textarea>
 </div>
 <div class="explanation">
@@ -545,52 +335,21 @@ Traceback (most recent call last):
   File "D:\Semester-8\Projek Khoir\app.py", line 26, in home
     data = getRedditData(redditUrl=url)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "D:\Semester-8\Projek Khoir\core\logic.py", line 51, in getRedditData
-    labelComments = [handleClassification(comment) for comment in bodyComments]
-                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "D:\Semester-8\Projek Khoir\core\svm.py", line 10, in handleClassification
-    outputs = model(**inputs)
-              ^^^^^^^^^^^^^^^
-  File "C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\transformers\models\roberta\modeling_roberta.py", line 1202, in forward
-    outputs = self.roberta(
-              ^^^^^^^^^^^^^
-  File "C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\transformers\models\roberta\modeling_roberta.py", line 805, in forward
-    embedding_output = self.embeddings(
-                       ^^^^^^^^^^^^^^^^
-  File "C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\transformers\models\roberta\modeling_roberta.py", line 109, in forward
-    inputs_embeds = self.word_embeddings(input_ids)
-                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\sparse.py", line 190, in forward
-    return F.embedding(
-           ^^^^^^^^^^^^
-  File "C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\functional.py", line 2551, in embedding
-    return torch.embedding(weight, input, padding_idx, scale_grad_by_freq, sparse)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-RuntimeError: Expected tensor for argument #1 'indices' to have one of the following scalar types: Long, Int; but got torch.FloatTensor instead (while checking arguments for embedding)
+  File "D:\Semester-8\Projek Khoir\core\logic.py", line 28, in getRedditData
+    submission = reddit.submission(url=redditUrl)  # Ganti sesuai kebutuhan
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\praw\util\deprecate_args.py", line 46, in wrapped
+    return func(**dict(zip(_old_args, args)), **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\praw\reddit.py", line 1005, in submission
+    return models.Submission(self, id=id, url=url)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\praw\models\reddit\submission.py", line 605, in __init__
+    self.id = self.id_from_url(url)
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\praw\models\reddit\submission.py", line 494, in id_from_url
+    raise InvalidURL(url)
+praw.exceptions.InvalidURL: Invalid URL: https://www.youtube.com
 
 
 -->
