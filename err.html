@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang=en>
   <head>
-    <title>TypeError: Object of type ValueError is not JSON serializable
+    <title>RuntimeError: Expected tensor for argument #1 &#39;indices&#39; to have one of the following scalar types: Long, Int; but got torch.FloatTensor instead (while checking arguments for embedding)
  // Werkzeug Debugger</title>
     <link rel="stylesheet" href="?__debugger__=yes&amp;cmd=resource&amp;f=style.css">
     <link rel="shortcut icon"
@@ -11,54 +11,22 @@
       var CONSOLE_MODE = false,
           EVALEX = true,
           EVALEX_TRUSTED = false,
-          SECRET = "32PzxucTk9v2lUHZSMHk";
+          SECRET = "7xnA4LU4v1kczo4z1Rrv";
     </script>
   </head>
   <body style="background-color: #fff">
     <div class="debugger">
-<h1>TypeError</h1>
+<h1>RuntimeError</h1>
 <div class="detail">
-  <p class="errormsg">TypeError: Object of type ValueError is not JSON serializable
+  <p class="errormsg">RuntimeError: Expected tensor for argument #1 &#39;indices&#39; to have one of the following scalar types: Long, Int; but got torch.FloatTensor instead (while checking arguments for embedding)
 </p>
 </div>
 <h2 class="traceback">Traceback <em>(most recent call last)</em></h2>
 <div class="traceback">
   <h3></h3>
-  <ul><li><div class="frame" id="frame-2700225549440">
-  <h4>File <cite class="filename">"D:\Semester-8\Projek Khoir\app.py"</cite>,
-      line <em class="line">16</em>,
-      in <code class="function">home</code></h4>
-  <div class="source "><pre class="line before"><span class="ws">    </span>elif request.method == &#39;POST&#39;:</pre>
-<pre class="line before"><span class="ws">        </span>dataJson = request.get_json()</pre>
-<pre class="line before"><span class="ws">        </span>url = dataJson.get(&#39;url&#39;)</pre>
-<pre class="line before"><span class="ws">        </span># return jsonify(dataJson)</pre>
-<pre class="line before"><span class="ws">        </span>try:</pre>
-<pre class="line current"><span class="ws">            </span>data = getRedditData(redditUrl=url)
-<span class="ws">            </span>       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
-<pre class="line after"><span class="ws">            </span>return jsonify(data)</pre>
-<pre class="line after"><span class="ws">        </span>except ValueError as e:</pre>
-<pre class="line after"><span class="ws">            </span>return jsonify({&#34;error&#34;: e}), 400</pre>
-<pre class="line after"><span class="ws">        </span>except TypeError as e:</pre>
-<pre class="line after"><span class="ws">            </span>return jsonify({</pre></div>
-</div>
-
-<li><div class="frame" id="frame-2700225549584">
-  <h4>File <cite class="filename">"D:\Semester-8\Projek Khoir\logic.py"</cite>,
-      line <em class="line">52</em>,
-      in <code class="function">getRedditData</code></h4>
-  <div class="source "><pre class="line before"><span class="ws">        </span>df = pd.DataFrame(komentar_list)</pre>
-<pre class="line before"><span class="ws">        </span>df.to_excel(&#39;komentar_reddit.xlsx&#39;, index=False)</pre>
-<pre class="line before"><span class="ws">        </span># print(&#34;Komentar berhasil disimpan ke komentar_reddit.csv&#34;)</pre>
-<pre class="line before"><span class="ws"></span> </pre>
-<pre class="line before"><span class="ws">    </span>else:</pre>
-<pre class="line current"><span class="ws">        </span>raise ValueError(&#34;Error&#34;)
-<span class="ws">        </span>^^^^^^^^^^^^^^^^^^^^^^^^^</pre></div>
-</div>
-
-<li><div class="exc-divider">During handling of the above exception, another exception occurred:</div>
-<li><div class="frame" id="frame-2700225546128">
+  <ul><li><div class="frame" id="frame-1843386537520">
   <h4>File <cite class="filename">"C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py"</cite>,
-      line <em class="line">1498</em>,
+      line <em class="line">1536</em>,
       in <code class="function">__call__</code></h4>
   <div class="source "><pre class="line before"><span class="ws">    </span>) -&gt; cabc.Iterable[bytes]:</pre>
 <pre class="line before"><span class="ws">        </span>&#34;&#34;&#34;The WSGI server calls the Flask application object as the</pre>
@@ -69,9 +37,9 @@
 <span class="ws">        </span>       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre></div>
 </div>
 
-<li><div class="frame" id="frame-2700225546992">
+<li><div class="frame" id="frame-1843386538384">
   <h4>File <cite class="filename">"C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py"</cite>,
-      line <em class="line">1476</em>,
+      line <em class="line">1514</em>,
       in <code class="function">wsgi_app</code></h4>
   <div class="source "><pre class="line before"><span class="ws">            </span>try:</pre>
 <pre class="line before"><span class="ws">                </span>ctx.push()</pre>
@@ -87,9 +55,9 @@
 <pre class="line after"><span class="ws">        </span>finally:</pre></div>
 </div>
 
-<li><div class="frame" id="frame-2700225547136">
+<li><div class="frame" id="frame-1843386538528">
   <h4>File <cite class="filename">"C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py"</cite>,
-      line <em class="line">1473</em>,
+      line <em class="line">1511</em>,
       in <code class="function">wsgi_app</code></h4>
   <div class="source "><pre class="line before"><span class="ws">        </span>ctx = self.request_context(environ)</pre>
 <pre class="line before"><span class="ws">        </span>error: BaseException | None = None</pre>
@@ -105,9 +73,9 @@
 <pre class="line after"><span class="ws">                </span>error = sys.exc_info()[1]</pre></div>
 </div>
 
-<li><div class="frame" id="frame-2700225547280">
+<li><div class="frame" id="frame-1843386538672">
   <h4>File <cite class="filename">"C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py"</cite>,
-      line <em class="line">882</em>,
+      line <em class="line">919</em>,
       in <code class="function">full_dispatch_request</code></h4>
   <div class="source "><pre class="line before"><span class="ws">            </span>request_started.send(self, _async_wrapper=self.ensure_sync)</pre>
 <pre class="line before"><span class="ws">            </span>rv = self.preprocess_request()</pre>
@@ -123,9 +91,9 @@
 <pre class="line after"><span class="ws">        </span>rv: ft.ResponseReturnValue | HTTPException,</pre></div>
 </div>
 
-<li><div class="frame" id="frame-2700225547424">
+<li><div class="frame" id="frame-1843386538816">
   <h4>File <cite class="filename">"C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py"</cite>,
-      line <em class="line">880</em>,
+      line <em class="line">917</em>,
       in <code class="function">full_dispatch_request</code></h4>
   <div class="source "><pre class="line before"><span class="ws"></span> </pre>
 <pre class="line before"><span class="ws">        </span>try:</pre>
@@ -141,9 +109,9 @@
 <pre class="line after"><span class="ws">    </span>def finalize_request(</pre></div>
 </div>
 
-<li><div class="frame" id="frame-2700225547568">
+<li><div class="frame" id="frame-1843386538960">
   <h4>File <cite class="filename">"C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py"</cite>,
-      line <em class="line">865</em>,
+      line <em class="line">902</em>,
       in <code class="function">dispatch_request</code></h4>
   <div class="source "><pre class="line before"><span class="ws">            </span>and req.method == &#34;OPTIONS&#34;</pre>
 <pre class="line before"><span class="ws">        </span>):</pre>
@@ -159,177 +127,293 @@
 <pre class="line after"><span class="ws">        </span>error handling.</pre></div>
 </div>
 
-<li><div class="frame" id="frame-2700225547712">
+<li><div class="frame" id="frame-1843386539104">
   <h4>File <cite class="filename">"D:\Semester-8\Projek Khoir\app.py"</cite>,
-      line <em class="line">19</em>,
+      line <em class="line">26</em>,
       in <code class="function">home</code></h4>
-  <div class="source "><pre class="line before"><span class="ws">        </span># return jsonify(dataJson)</pre>
+  <div class="source "><pre class="line before"><span class="ws">        </span>if not URL_REGEX.match(url):</pre>
+<pre class="line before"><span class="ws">            </span>return jsonify({&#34;error&#34;:&#34;url tidak valid&#34;}), 400</pre>
+<pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">        </span># return jsonify(dataJson)</pre>
 <pre class="line before"><span class="ws">        </span>try:</pre>
-<pre class="line before"><span class="ws">            </span>data = getRedditData(redditUrl=url)</pre>
-<pre class="line before"><span class="ws">            </span>return jsonify(data)</pre>
-<pre class="line before"><span class="ws">        </span>except ValueError as e:</pre>
-<pre class="line current"><span class="ws">            </span>return jsonify({&#34;error&#34;: e}), 400
-<span class="ws">            </span>       ^^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line current"><span class="ws">            </span>data = getRedditData(redditUrl=url)
+<span class="ws">            </span>       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws">            </span>return jsonify(data)</pre>
+<pre class="line after"><span class="ws">        </span>except ValueError as e:</pre>
+<pre class="line after"><span class="ws">            </span>return jsonify({&#34;error&#34;: str(e)}), 400</pre>
 <pre class="line after"><span class="ws">        </span>except TypeError as e:</pre>
-<pre class="line after"><span class="ws">            </span>return jsonify({</pre>
-<pre class="line after"><span class="ws">                </span>&#34;data&#34; : &#39;error&#39;,</pre>
-<pre class="line after"><span class="ws">                </span>&#34;error&#34;: e.args,</pre>
-<pre class="line after"><span class="ws">            </span>}), 405</pre></div>
+<pre class="line after"><span class="ws">            </span>return jsonify({</pre></div>
 </div>
 
-<li><div class="frame" id="frame-2700225547856">
-  <h4>File <cite class="filename">"C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\json\__init__.py"</cite>,
-      line <em class="line">170</em>,
-      in <code class="function">jsonify</code></h4>
-  <div class="source "><pre class="line before"><span class="ws">        </span>Added support for serializing top-level arrays. This was a</pre>
-<pre class="line before"><span class="ws">        </span>security risk in ancient browsers. See :ref:`security-json`.</pre>
+<li><div class="frame" id="frame-1843386539248">
+  <h4>File <cite class="filename">"D:\Semester-8\Projek Khoir\core\logic.py"</cite>,
+      line <em class="line">51</em>,
+      in <code class="function">getRedditData</code></h4>
+  <div class="source "><pre class="line before"><span class="ws">                </span>&#39;created_at&#39; : (datetime.datetime.fromtimestamp(comment.created_utc)).strftime(&#39;%Y-%m-%d %H:%M:%S&#39;),</pre>
+<pre class="line before"><span class="ws">            </span>})</pre>
+<pre class="line before"><span class="ws">        </span>komentar_list = [comment for comment in komentar_list if comment[&#39;body&#39;].strip() != &#39;&#39;]</pre>
 <pre class="line before"><span class="ws"></span> </pre>
-<pre class="line before"><span class="ws">    </span>.. versionadded:: 0.2</pre>
-<pre class="line before"><span class="ws">    </span>&#34;&#34;&#34;</pre>
-<pre class="line current"><span class="ws">    </span>return current_app.json.response(*args, **kwargs)  # type: ignore[return-value]
-<span class="ws">    </span>       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre></div>
+<pre class="line before"><span class="ws">        </span>bodyComments = [preprocess_text(comment[&#39;body&#39;]) for comment in komentar_list]</pre>
+<pre class="line current"><span class="ws">        </span>labelComments = [handleClassification(comment) for comment in bodyComments]
+<span class="ws">        </span>                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">        </span>komentar_list = [{**c, &#39;label&#39;: l} for c, l in zip(komentar_list, labelComments)]</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">        </span># df = pd.DataFrame(labelComments)</pre>
+<pre class="line after"><span class="ws">        </span># df.to_excel(&#39;web_komentar2.xlsx&#39;, index=False)</pre></div>
 </div>
 
-<li><div class="frame" id="frame-2700225548000">
-  <h4>File <cite class="filename">"C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\json\provider.py"</cite>,
-      line <em class="line">214</em>,
-      in <code class="function">response</code></h4>
-  <div class="source "><pre class="line before"><span class="ws">            </span>dump_args.setdefault(&#34;indent&#34;, 2)</pre>
+<li><div class="frame" id="frame-1843386539392">
+  <h4>File <cite class="filename">"D:\Semester-8\Projek Khoir\core\svm.py"</cite>,
+      line <em class="line">10</em>,
+      in <code class="function">handleClassification</code></h4>
+  <div class="source "><pre class="line before"><span class="ws"></span>tokenizer = AutoTokenizer.from_pretrained(model_name)</pre>
+<pre class="line before"><span class="ws"></span>model = AutoModelForSequenceClassification.from_pretrained(model_name)</pre>
+<pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws"></span>def handleClassification(text):</pre>
+<pre class="line before"><span class="ws">    </span>inputs = tokenizer(text, return_tensors=&#34;pt&#34;, truncation=True, padding=True, max_length=512)</pre>
+<pre class="line current"><span class="ws">    </span>outputs = model(**inputs)
+<span class="ws">    </span>          ^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws">    </span>probs = torch.nn.functional.softmax(outputs.logits, dim=1)</pre>
+<pre class="line after"><span class="ws">    </span>pred = torch.argmax(probs, dim=1).item()</pre>
+<pre class="line after"><span class="ws">    </span>return 0 if pred == 0 else 1</pre></div>
+</div>
+
+<li><div class="frame" id="frame-1843386539536">
+  <h4>File <cite class="filename">"C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\module.py"</cite>,
+      line <em class="line">1751</em>,
+      in <code class="function">_wrapped_call_impl</code></h4>
+  <div class="source "><pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">    </span>def _wrapped_call_impl(self, *args, **kwargs):</pre>
+<pre class="line before"><span class="ws">        </span>if self._compiled_call_impl is not None:</pre>
+<pre class="line before"><span class="ws">            </span>return self._compiled_call_impl(*args, **kwargs)  # type: ignore[misc]</pre>
 <pre class="line before"><span class="ws">        </span>else:</pre>
-<pre class="line before"><span class="ws">            </span>dump_args.setdefault(&#34;separators&#34;, (&#34;,&#34;, &#34;:&#34;))</pre>
-<pre class="line before"><span class="ws"></span> </pre>
-<pre class="line before"><span class="ws">        </span>return self._app.response_class(</pre>
-<pre class="line current"><span class="ws">            </span>f&#34;{self.dumps(obj, **dump_args)}\n&#34;, mimetype=self.mimetype
-<span class="ws">            </span>   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
-<pre class="line after"><span class="ws">        </span>)</pre></div>
+<pre class="line current"><span class="ws">            </span>return self._call_impl(*args, **kwargs)
+<span class="ws">            </span>       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">    </span># torchrec tests the code consistency with the following code</pre>
+<pre class="line after"><span class="ws">    </span># fmt: off</pre>
+<pre class="line after"><span class="ws">    </span>def _call_impl(self, *args, **kwargs):</pre>
+<pre class="line after"><span class="ws">        </span>forward_call = (self._slow_forward if torch._C._get_tracing_state() else self.forward)</pre></div>
 </div>
 
-<li><div class="frame" id="frame-2700225548432">
-  <h4>File <cite class="filename">"C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\json\provider.py"</cite>,
-      line <em class="line">179</em>,
-      in <code class="function">dumps</code></h4>
-  <div class="source "><pre class="line before"><span class="ws">        </span>:param kwargs: Passed to :func:`json.dumps`.</pre>
+<li><div class="frame" id="frame-1843389931600">
+  <h4>File <cite class="filename">"C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\module.py"</cite>,
+      line <em class="line">1762</em>,
+      in <code class="function">_call_impl</code></h4>
+  <div class="source "><pre class="line before"><span class="ws">        </span># If we don&#39;t have any hooks, we want to skip the rest of the logic in</pre>
+<pre class="line before"><span class="ws">        </span># this function, and just call forward.</pre>
+<pre class="line before"><span class="ws">        </span>if not (self._backward_hooks or self._backward_pre_hooks or self._forward_hooks or self._forward_pre_hooks</pre>
+<pre class="line before"><span class="ws">                </span>or _global_backward_pre_hooks or _global_backward_hooks</pre>
+<pre class="line before"><span class="ws">                </span>or _global_forward_hooks or _global_forward_pre_hooks):</pre>
+<pre class="line current"><span class="ws">            </span>return forward_call(*args, **kwargs)
+<span class="ws">            </span>       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">        </span>result = None</pre>
+<pre class="line after"><span class="ws">        </span>called_always_called_hooks = set()</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">        </span>def inner():</pre></div>
+</div>
+
+<li><div class="frame" id="frame-1843389931744">
+  <h4>File <cite class="filename">"C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\transformers\models\roberta\modeling_roberta.py"</cite>,
+      line <em class="line">1202</em>,
+      in <code class="function">forward</code></h4>
+  <div class="source "><pre class="line before"><span class="ws">            </span>config.num_labels - 1]`. If `config.num_labels == 1` a regression loss is computed (Mean-Square loss), If</pre>
+<pre class="line before"><span class="ws">            </span>`config.num_labels &gt; 1` a classification loss is computed (Cross-Entropy).</pre>
 <pre class="line before"><span class="ws">        </span>&#34;&#34;&#34;</pre>
-<pre class="line before"><span class="ws">        </span>kwargs.setdefault(&#34;default&#34;, self.default)</pre>
-<pre class="line before"><span class="ws">        </span>kwargs.setdefault(&#34;ensure_ascii&#34;, self.ensure_ascii)</pre>
-<pre class="line before"><span class="ws">        </span>kwargs.setdefault(&#34;sort_keys&#34;, self.sort_keys)</pre>
-<pre class="line current"><span class="ws">        </span>return json.dumps(obj, **kwargs)
-<span class="ws">        </span>       ^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
-<pre class="line after"><span class="ws"></span> </pre>
-<pre class="line after"><span class="ws">    </span>def loads(self, s: str | bytes, **kwargs: t.Any) -&gt; t.Any:</pre>
-<pre class="line after"><span class="ws">        </span>&#34;&#34;&#34;Deserialize data as JSON from a string or bytes.</pre>
-<pre class="line after"><span class="ws"></span> </pre>
-<pre class="line after"><span class="ws">        </span>:param s: Text or UTF-8 bytes.</pre></div>
-</div>
-
-<li><div class="frame" id="frame-2700225548576">
-  <h4>File <cite class="filename">"C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py"</cite>,
-      line <em class="line">238</em>,
-      in <code class="function">dumps</code></h4>
-  <div class="source library"><pre class="line before"><span class="ws">        </span>cls = JSONEncoder</pre>
-<pre class="line before"><span class="ws">    </span>return cls(</pre>
-<pre class="line before"><span class="ws">        </span>skipkeys=skipkeys, ensure_ascii=ensure_ascii,</pre>
-<pre class="line before"><span class="ws">        </span>check_circular=check_circular, allow_nan=allow_nan, indent=indent,</pre>
-<pre class="line before"><span class="ws">        </span>separators=separators, default=default, sort_keys=sort_keys,</pre>
-<pre class="line current"><span class="ws">        </span>**kw).encode(obj)
-<span class="ws">        </span>      ^^^^^^^^^^^</pre>
-<pre class="line after"><span class="ws"></span> </pre>
-<pre class="line after"><span class="ws"></span> </pre>
-<pre class="line after"><span class="ws"></span>_default_decoder = JSONDecoder(object_hook=None, object_pairs_hook=None)</pre>
-<pre class="line after"><span class="ws"></span> </pre>
-<pre class="line after"><span class="ws"></span> </pre></div>
-</div>
-
-<li><div class="frame" id="frame-2700225548720">
-  <h4>File <cite class="filename">"C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\json\encoder.py"</cite>,
-      line <em class="line">202</em>,
-      in <code class="function">encode</code></h4>
-  <div class="source library"><pre class="line before"><span class="ws">        </span># This doesn&#39;t pass the iterator directly to &#39;&#39;.join() because the</pre>
-<pre class="line before"><span class="ws">        </span># exceptions aren&#39;t as detailed.  The list call should be roughly</pre>
-<pre class="line before"><span class="ws">        </span># equivalent to the PySequence_Fast that &#39;&#39;.join() would do.</pre>
-<pre class="line before"><span class="ws">        </span>chunks = self.iterencode(o, _one_shot=True)</pre>
-<pre class="line before"><span class="ws">        </span>if not isinstance(chunks, (list, tuple)):</pre>
-<pre class="line current"><span class="ws">            </span>chunks = list(chunks)
-<span class="ws">            </span>         ^^^^^^^^^^^^</pre>
-<pre class="line after"><span class="ws">        </span>return &#39;&#39;.join(chunks)</pre>
-<pre class="line after"><span class="ws"></span> </pre>
-<pre class="line after"><span class="ws">    </span>def iterencode(self, o, _one_shot=False):</pre>
-<pre class="line after"><span class="ws">        </span>&#34;&#34;&#34;Encode the given object and yield each string</pre>
-<pre class="line after"><span class="ws">        </span>representation as available.</pre></div>
-</div>
-
-<li><div class="frame" id="frame-2700225548864">
-  <h4>File <cite class="filename">"C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\json\encoder.py"</cite>,
-      line <em class="line">432</em>,
-      in <code class="function">_iterencode</code></h4>
-  <div class="source library"><pre class="line before"><span class="ws">            </span># see comment for int/float in _make_iterencode</pre>
-<pre class="line before"><span class="ws">            </span>yield _floatstr(o)</pre>
-<pre class="line before"><span class="ws">        </span>elif isinstance(o, (list, tuple)):</pre>
-<pre class="line before"><span class="ws">            </span>yield from _iterencode_list(o, _current_indent_level)</pre>
-<pre class="line before"><span class="ws">        </span>elif isinstance(o, dict):</pre>
-<pre class="line current"><span class="ws">            </span>yield from _iterencode_dict(o, _current_indent_level)
-<span class="ws">            </span>^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
-<pre class="line after"><span class="ws">        </span>else:</pre>
-<pre class="line after"><span class="ws">            </span>if markers is not None:</pre>
-<pre class="line after"><span class="ws">                </span>markerid = id(o)</pre>
-<pre class="line after"><span class="ws">                </span>if markerid in markers:</pre>
-<pre class="line after"><span class="ws">                    </span>raise ValueError(&#34;Circular reference detected&#34;)</pre></div>
-</div>
-
-<li><div class="frame" id="frame-2700225549008">
-  <h4>File <cite class="filename">"C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\json\encoder.py"</cite>,
-      line <em class="line">406</em>,
-      in <code class="function">_iterencode_dict</code></h4>
-  <div class="source library"><pre class="line before"><span class="ws">                    </span>chunks = _iterencode_list(value, _current_indent_level)</pre>
-<pre class="line before"><span class="ws">                </span>elif isinstance(value, dict):</pre>
-<pre class="line before"><span class="ws">                    </span>chunks = _iterencode_dict(value, _current_indent_level)</pre>
-<pre class="line before"><span class="ws">                </span>else:</pre>
-<pre class="line before"><span class="ws">                    </span>chunks = _iterencode(value, _current_indent_level)</pre>
-<pre class="line current"><span class="ws">                </span>yield from chunks
-<span class="ws">                </span>^^^^^^^^^^^^^^^^^</pre>
-<pre class="line after"><span class="ws">        </span>if newline_indent is not None:</pre>
-<pre class="line after"><span class="ws">            </span>_current_indent_level -= 1</pre>
-<pre class="line after"><span class="ws">            </span>yield &#39;\n&#39; + _indent * _current_indent_level</pre>
-<pre class="line after"><span class="ws">        </span>yield &#39;}&#39;</pre>
-<pre class="line after"><span class="ws">        </span>if markers is not None:</pre></div>
-</div>
-
-<li><div class="frame" id="frame-2700225549152">
-  <h4>File <cite class="filename">"C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\json\encoder.py"</cite>,
-      line <em class="line">439</em>,
-      in <code class="function">_iterencode</code></h4>
-  <div class="source library"><pre class="line before"><span class="ws">            </span>if markers is not None:</pre>
-<pre class="line before"><span class="ws">                </span>markerid = id(o)</pre>
-<pre class="line before"><span class="ws">                </span>if markerid in markers:</pre>
-<pre class="line before"><span class="ws">                    </span>raise ValueError(&#34;Circular reference detected&#34;)</pre>
-<pre class="line before"><span class="ws">                </span>markers[markerid] = o</pre>
-<pre class="line current"><span class="ws">            </span>o = _default(o)
-<span class="ws">            </span>    ^^^^^^^^^^^</pre>
-<pre class="line after"><span class="ws">            </span>yield from _iterencode(o, _current_indent_level)</pre>
-<pre class="line after"><span class="ws">            </span>if markers is not None:</pre>
-<pre class="line after"><span class="ws">                </span>del markers[markerid]</pre>
-<pre class="line after"><span class="ws">    </span>return _iterencode</pre></div>
-</div>
-
-<li><div class="frame" id="frame-2700225549296">
-  <h4>File <cite class="filename">"C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\json\provider.py"</cite>,
-      line <em class="line">121</em>,
-      in <code class="function">_default</code></h4>
-  <div class="source "><pre class="line before"><span class="ws">        </span>return dataclasses.asdict(o)</pre>
+<pre class="line before"><span class="ws">        </span>return_dict = return_dict if return_dict is not None else self.config.use_return_dict</pre>
 <pre class="line before"><span class="ws"></span> </pre>
-<pre class="line before"><span class="ws">    </span>if hasattr(o, &#34;__html__&#34;):</pre>
-<pre class="line before"><span class="ws">        </span>return str(o.__html__())</pre>
+<pre class="line current"><span class="ws">        </span>outputs = self.roberta(
+<span class="ws">        </span>          </pre>
+<pre class="line after"><span class="ws">            </span>input_ids,</pre>
+<pre class="line after"><span class="ws">            </span>attention_mask=attention_mask,</pre>
+<pre class="line after"><span class="ws">            </span>token_type_ids=token_type_ids,</pre>
+<pre class="line after"><span class="ws">            </span>position_ids=position_ids,</pre>
+<pre class="line after"><span class="ws">            </span>head_mask=head_mask,</pre></div>
+</div>
+
+<li><div class="frame" id="frame-1843390075312">
+  <h4>File <cite class="filename">"C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\module.py"</cite>,
+      line <em class="line">1751</em>,
+      in <code class="function">_wrapped_call_impl</code></h4>
+  <div class="source "><pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">    </span>def _wrapped_call_impl(self, *args, **kwargs):</pre>
+<pre class="line before"><span class="ws">        </span>if self._compiled_call_impl is not None:</pre>
+<pre class="line before"><span class="ws">            </span>return self._compiled_call_impl(*args, **kwargs)  # type: ignore[misc]</pre>
+<pre class="line before"><span class="ws">        </span>else:</pre>
+<pre class="line current"><span class="ws">            </span>return self._call_impl(*args, **kwargs)
+<span class="ws">            </span>       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">    </span># torchrec tests the code consistency with the following code</pre>
+<pre class="line after"><span class="ws">    </span># fmt: off</pre>
+<pre class="line after"><span class="ws">    </span>def _call_impl(self, *args, **kwargs):</pre>
+<pre class="line after"><span class="ws">        </span>forward_call = (self._slow_forward if torch._C._get_tracing_state() else self.forward)</pre></div>
+</div>
+
+<li><div class="frame" id="frame-1843390075456">
+  <h4>File <cite class="filename">"C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\module.py"</cite>,
+      line <em class="line">1762</em>,
+      in <code class="function">_call_impl</code></h4>
+  <div class="source "><pre class="line before"><span class="ws">        </span># If we don&#39;t have any hooks, we want to skip the rest of the logic in</pre>
+<pre class="line before"><span class="ws">        </span># this function, and just call forward.</pre>
+<pre class="line before"><span class="ws">        </span>if not (self._backward_hooks or self._backward_pre_hooks or self._forward_hooks or self._forward_pre_hooks</pre>
+<pre class="line before"><span class="ws">                </span>or _global_backward_pre_hooks or _global_backward_hooks</pre>
+<pre class="line before"><span class="ws">                </span>or _global_forward_hooks or _global_forward_pre_hooks):</pre>
+<pre class="line current"><span class="ws">            </span>return forward_call(*args, **kwargs)
+<span class="ws">            </span>       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">        </span>result = None</pre>
+<pre class="line after"><span class="ws">        </span>called_always_called_hooks = set()</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">        </span>def inner():</pre></div>
+</div>
+
+<li><div class="frame" id="frame-1843390075600">
+  <h4>File <cite class="filename">"C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\transformers\models\roberta\modeling_roberta.py"</cite>,
+      line <em class="line">805</em>,
+      in <code class="function">forward</code></h4>
+  <div class="source "><pre class="line before"><span class="ws">                </span>buffered_token_type_ids_expanded = buffered_token_type_ids.expand(batch_size, seq_length)</pre>
+<pre class="line before"><span class="ws">                </span>token_type_ids = buffered_token_type_ids_expanded</pre>
+<pre class="line before"><span class="ws">            </span>else:</pre>
+<pre class="line before"><span class="ws">                </span>token_type_ids = torch.zeros(input_shape, dtype=torch.long, device=device)</pre>
 <pre class="line before"><span class="ws"></span> </pre>
-<pre class="line current"><span class="ws">    </span>raise TypeError(f&#34;Object of type {type(o).__name__} is not JSON serializable&#34;)
-<span class="ws">    </span>^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line current"><span class="ws">        </span>embedding_output = self.embeddings(
+<span class="ws">        </span>                   </pre>
+<pre class="line after"><span class="ws">            </span>input_ids=input_ids,</pre>
+<pre class="line after"><span class="ws">            </span>position_ids=position_ids,</pre>
+<pre class="line after"><span class="ws">            </span>token_type_ids=token_type_ids,</pre>
+<pre class="line after"><span class="ws">            </span>inputs_embeds=inputs_embeds,</pre>
+<pre class="line after"><span class="ws">            </span>past_key_values_length=past_key_values_length,</pre></div>
+</div>
+
+<li><div class="frame" id="frame-1843390075744">
+  <h4>File <cite class="filename">"C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\module.py"</cite>,
+      line <em class="line">1751</em>,
+      in <code class="function">_wrapped_call_impl</code></h4>
+  <div class="source "><pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">    </span>def _wrapped_call_impl(self, *args, **kwargs):</pre>
+<pre class="line before"><span class="ws">        </span>if self._compiled_call_impl is not None:</pre>
+<pre class="line before"><span class="ws">            </span>return self._compiled_call_impl(*args, **kwargs)  # type: ignore[misc]</pre>
+<pre class="line before"><span class="ws">        </span>else:</pre>
+<pre class="line current"><span class="ws">            </span>return self._call_impl(*args, **kwargs)
+<span class="ws">            </span>       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">    </span># torchrec tests the code consistency with the following code</pre>
+<pre class="line after"><span class="ws">    </span># fmt: off</pre>
+<pre class="line after"><span class="ws">    </span>def _call_impl(self, *args, **kwargs):</pre>
+<pre class="line after"><span class="ws">        </span>forward_call = (self._slow_forward if torch._C._get_tracing_state() else self.forward)</pre></div>
+</div>
+
+<li><div class="frame" id="frame-1843390075888">
+  <h4>File <cite class="filename">"C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\module.py"</cite>,
+      line <em class="line">1762</em>,
+      in <code class="function">_call_impl</code></h4>
+  <div class="source "><pre class="line before"><span class="ws">        </span># If we don&#39;t have any hooks, we want to skip the rest of the logic in</pre>
+<pre class="line before"><span class="ws">        </span># this function, and just call forward.</pre>
+<pre class="line before"><span class="ws">        </span>if not (self._backward_hooks or self._backward_pre_hooks or self._forward_hooks or self._forward_pre_hooks</pre>
+<pre class="line before"><span class="ws">                </span>or _global_backward_pre_hooks or _global_backward_hooks</pre>
+<pre class="line before"><span class="ws">                </span>or _global_forward_hooks or _global_forward_pre_hooks):</pre>
+<pre class="line current"><span class="ws">            </span>return forward_call(*args, **kwargs)
+<span class="ws">            </span>       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">        </span>result = None</pre>
+<pre class="line after"><span class="ws">        </span>called_always_called_hooks = set()</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">        </span>def inner():</pre></div>
+</div>
+
+<li><div class="frame" id="frame-1843390076032">
+  <h4>File <cite class="filename">"C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\transformers\models\roberta\modeling_roberta.py"</cite>,
+      line <em class="line">109</em>,
+      in <code class="function">forward</code></h4>
+  <div class="source "><pre class="line before"><span class="ws">                </span>token_type_ids = buffered_token_type_ids_expanded</pre>
+<pre class="line before"><span class="ws">            </span>else:</pre>
+<pre class="line before"><span class="ws">                </span>token_type_ids = torch.zeros(input_shape, dtype=torch.long, device=self.position_ids.device)</pre>
+<pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">        </span>if inputs_embeds is None:</pre>
+<pre class="line current"><span class="ws">            </span>inputs_embeds = self.word_embeddings(input_ids)
+<span class="ws">            </span>                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws">        </span>token_type_embeddings = self.token_type_embeddings(token_type_ids)</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">        </span>embeddings = inputs_embeds + token_type_embeddings</pre>
+<pre class="line after"><span class="ws">        </span>if self.position_embedding_type == &#34;absolute&#34;:</pre>
+<pre class="line after"><span class="ws">            </span>position_embeddings = self.position_embeddings(position_ids)</pre></div>
+</div>
+
+<li><div class="frame" id="frame-1843390076176">
+  <h4>File <cite class="filename">"C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\module.py"</cite>,
+      line <em class="line">1751</em>,
+      in <code class="function">_wrapped_call_impl</code></h4>
+  <div class="source "><pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">    </span>def _wrapped_call_impl(self, *args, **kwargs):</pre>
+<pre class="line before"><span class="ws">        </span>if self._compiled_call_impl is not None:</pre>
+<pre class="line before"><span class="ws">            </span>return self._compiled_call_impl(*args, **kwargs)  # type: ignore[misc]</pre>
+<pre class="line before"><span class="ws">        </span>else:</pre>
+<pre class="line current"><span class="ws">            </span>return self._call_impl(*args, **kwargs)
+<span class="ws">            </span>       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">    </span># torchrec tests the code consistency with the following code</pre>
+<pre class="line after"><span class="ws">    </span># fmt: off</pre>
+<pre class="line after"><span class="ws">    </span>def _call_impl(self, *args, **kwargs):</pre>
+<pre class="line after"><span class="ws">        </span>forward_call = (self._slow_forward if torch._C._get_tracing_state() else self.forward)</pre></div>
+</div>
+
+<li><div class="frame" id="frame-1843390076320">
+  <h4>File <cite class="filename">"C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\module.py"</cite>,
+      line <em class="line">1762</em>,
+      in <code class="function">_call_impl</code></h4>
+  <div class="source "><pre class="line before"><span class="ws">        </span># If we don&#39;t have any hooks, we want to skip the rest of the logic in</pre>
+<pre class="line before"><span class="ws">        </span># this function, and just call forward.</pre>
+<pre class="line before"><span class="ws">        </span>if not (self._backward_hooks or self._backward_pre_hooks or self._forward_hooks or self._forward_pre_hooks</pre>
+<pre class="line before"><span class="ws">                </span>or _global_backward_pre_hooks or _global_backward_hooks</pre>
+<pre class="line before"><span class="ws">                </span>or _global_forward_hooks or _global_forward_pre_hooks):</pre>
+<pre class="line current"><span class="ws">            </span>return forward_call(*args, **kwargs)
+<span class="ws">            </span>       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">        </span>result = None</pre>
+<pre class="line after"><span class="ws">        </span>called_always_called_hooks = set()</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">        </span>def inner():</pre></div>
+</div>
+
+<li><div class="frame" id="frame-1843390076464">
+  <h4>File <cite class="filename">"C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\sparse.py"</cite>,
+      line <em class="line">190</em>,
+      in <code class="function">forward</code></h4>
+  <div class="source "><pre class="line before"><span class="ws">        </span>if self.padding_idx is not None:</pre>
+<pre class="line before"><span class="ws">            </span>with torch.no_grad():</pre>
+<pre class="line before"><span class="ws">                </span>self.weight[self.padding_idx].fill_(0)</pre>
+<pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">    </span>def forward(self, input: Tensor) -&gt; Tensor:</pre>
+<pre class="line current"><span class="ws">        </span>return F.embedding(
+<span class="ws">        </span>       </pre>
+<pre class="line after"><span class="ws">            </span>input,</pre>
+<pre class="line after"><span class="ws">            </span>self.weight,</pre>
+<pre class="line after"><span class="ws">            </span>self.padding_idx,</pre>
+<pre class="line after"><span class="ws">            </span>self.max_norm,</pre>
+<pre class="line after"><span class="ws">            </span>self.norm_type,</pre></div>
+</div>
+
+<li><div class="frame" id="frame-1843390081216">
+  <h4>File <cite class="filename">"C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\functional.py"</cite>,
+      line <em class="line">2551</em>,
+      in <code class="function">embedding</code></h4>
+  <div class="source "><pre class="line before"><span class="ws">        </span># XXX: equivalent to</pre>
+<pre class="line before"><span class="ws">        </span># with torch.no_grad():</pre>
+<pre class="line before"><span class="ws">        </span>#   torch.embedding_renorm_</pre>
+<pre class="line before"><span class="ws">        </span># remove once script supports set_grad_enabled</pre>
+<pre class="line before"><span class="ws">        </span>_no_grad_embedding_renorm_(weight, input, max_norm, norm_type)</pre>
+<pre class="line current"><span class="ws">    </span>return torch.embedding(weight, input, padding_idx, scale_grad_by_freq, sparse)
+<span class="ws">    </span>       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
 <pre class="line after"><span class="ws"></span> </pre>
 <pre class="line after"><span class="ws"></span> </pre>
-<pre class="line after"><span class="ws"></span>class DefaultJSONProvider(JSONProvider):</pre>
-<pre class="line after"><span class="ws">    </span>&#34;&#34;&#34;Provide JSON operations using Python&#39;s built-in :mod:`json`</pre>
-<pre class="line after"><span class="ws">    </span>library. Serializes the following additional data types:</pre></div>
+<pre class="line after"><span class="ws"></span>def embedding_bag(</pre>
+<pre class="line after"><span class="ws">    </span>input: Tensor,</pre>
+<pre class="line after"><span class="ws">    </span>weight: Tensor,</pre></div>
 </div>
 </ul>
-  <blockquote>TypeError: Object of type ValueError is not JSON serializable
+  <blockquote>RuntimeError: Expected tensor for argument #1 &#39;indices&#39; to have one of the following scalar types: Long, Int; but got torch.FloatTensor instead (while checking arguments for embedding)
 </blockquote>
 </div>
 
@@ -338,62 +422,73 @@
       This is the Copy/Paste friendly version of the traceback.
     </p>
     <textarea cols="50" rows="10" name="code" readonly>Traceback (most recent call last):
-  File &#34;D:\Semester-8\Projek Khoir\app.py&#34;, line 16, in home
-    data = getRedditData(redditUrl=url)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &#34;D:\Semester-8\Projek Khoir\logic.py&#34;, line 52, in getRedditData
-    raise ValueError(&#34;Error&#34;)
-ValueError: Error
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File &#34;C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py&#34;, line 1498, in __call__
+  File &#34;C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py&#34;, line 1536, in __call__
     return self.wsgi_app(environ, start_response)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &#34;C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py&#34;, line 1476, in wsgi_app
+  File &#34;C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py&#34;, line 1514, in wsgi_app
     response = self.handle_exception(e)
                ^^^^^^^^^^^^^^^^^^^^^^^^
-  File &#34;C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py&#34;, line 1473, in wsgi_app
+  File &#34;C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py&#34;, line 1511, in wsgi_app
     response = self.full_dispatch_request()
                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &#34;C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py&#34;, line 882, in full_dispatch_request
+  File &#34;C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py&#34;, line 919, in full_dispatch_request
     rv = self.handle_user_exception(e)
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &#34;C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py&#34;, line 880, in full_dispatch_request
+  File &#34;C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py&#34;, line 917, in full_dispatch_request
     rv = self.dispatch_request()
          ^^^^^^^^^^^^^^^^^^^^^^^
-  File &#34;C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py&#34;, line 865, in dispatch_request
+  File &#34;C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py&#34;, line 902, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &#34;D:\Semester-8\Projek Khoir\app.py&#34;, line 19, in home
-    return jsonify({&#34;error&#34;: e}), 400
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &#34;C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\json\__init__.py&#34;, line 170, in jsonify
-    return current_app.json.response(*args, **kwargs)  # type: ignore[return-value]
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &#34;C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\json\provider.py&#34;, line 214, in response
-    f&#34;{self.dumps(obj, **dump_args)}\n&#34;, mimetype=self.mimetype
-       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &#34;C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\json\provider.py&#34;, line 179, in dumps
-    return json.dumps(obj, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &#34;C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py&#34;, line 238, in dumps
-    **kw).encode(obj)
-          ^^^^^^^^^^^
-  File &#34;C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\json\encoder.py&#34;, line 202, in encode
-    chunks = list(chunks)
-             ^^^^^^^^^^^^
-  File &#34;C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\json\encoder.py&#34;, line 432, in _iterencode
-    yield from _iterencode_dict(o, _current_indent_level)
-  File &#34;C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\json\encoder.py&#34;, line 406, in _iterencode_dict
-    yield from chunks
-  File &#34;C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\json\encoder.py&#34;, line 439, in _iterencode
-    o = _default(o)
-        ^^^^^^^^^^^
-  File &#34;C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\json\provider.py&#34;, line 121, in _default
-    raise TypeError(f&#34;Object of type {type(o).__name__} is not JSON serializable&#34;)
-TypeError: Object of type ValueError is not JSON serializable
+  File &#34;D:\Semester-8\Projek Khoir\app.py&#34;, line 26, in home
+    data = getRedditData(redditUrl=url)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;D:\Semester-8\Projek Khoir\core\logic.py&#34;, line 51, in getRedditData
+    labelComments = [handleClassification(comment) for comment in bodyComments]
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;D:\Semester-8\Projek Khoir\core\svm.py&#34;, line 10, in handleClassification
+    outputs = model(**inputs)
+              ^^^^^^^^^^^^^^^
+  File &#34;C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\module.py&#34;, line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\module.py&#34;, line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\transformers\models\roberta\modeling_roberta.py&#34;, line 1202, in forward
+    outputs = self.roberta(
+              ^^^^^^^^^^^^^
+  File &#34;C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\module.py&#34;, line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\module.py&#34;, line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\transformers\models\roberta\modeling_roberta.py&#34;, line 805, in forward
+    embedding_output = self.embeddings(
+                       ^^^^^^^^^^^^^^^^
+  File &#34;C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\module.py&#34;, line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\module.py&#34;, line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\transformers\models\roberta\modeling_roberta.py&#34;, line 109, in forward
+    inputs_embeds = self.word_embeddings(input_ids)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\module.py&#34;, line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\module.py&#34;, line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\sparse.py&#34;, line 190, in forward
+    return F.embedding(
+           ^^^^^^^^^^^^
+  File &#34;C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\functional.py&#34;, line 2551, in embedding
+    return torch.embedding(weight, input, padding_idx, scale_grad_by_freq, sparse)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Expected tensor for argument #1 &#39;indices&#39; to have one of the following scalar types: Long, Int; but got torch.FloatTensor instead (while checking arguments for embedding)
 </textarea>
 </div>
 <div class="explanation">
@@ -429,62 +524,73 @@ TypeError: Object of type ValueError is not JSON serializable
 <!--
 
 Traceback (most recent call last):
-  File "D:\Semester-8\Projek Khoir\app.py", line 16, in home
-    data = getRedditData(redditUrl=url)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "D:\Semester-8\Projek Khoir\logic.py", line 52, in getRedditData
-    raise ValueError("Error")
-ValueError: Error
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 1498, in __call__
+  File "C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 1536, in __call__
     return self.wsgi_app(environ, start_response)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 1476, in wsgi_app
+  File "C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 1514, in wsgi_app
     response = self.handle_exception(e)
                ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 1473, in wsgi_app
+  File "C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 1511, in wsgi_app
     response = self.full_dispatch_request()
                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 882, in full_dispatch_request
+  File "C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 919, in full_dispatch_request
     rv = self.handle_user_exception(e)
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 880, in full_dispatch_request
+  File "C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 917, in full_dispatch_request
     rv = self.dispatch_request()
          ^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 865, in dispatch_request
+  File "C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\app.py", line 902, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "D:\Semester-8\Projek Khoir\app.py", line 19, in home
-    return jsonify({"error": e}), 400
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\json\__init__.py", line 170, in jsonify
-    return current_app.json.response(*args, **kwargs)  # type: ignore[return-value]
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\json\provider.py", line 214, in response
-    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
-       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\json\provider.py", line 179, in dumps
-    return json.dumps(obj, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py", line 238, in dumps
-    **kw).encode(obj)
-          ^^^^^^^^^^^
-  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\json\encoder.py", line 202, in encode
-    chunks = list(chunks)
-             ^^^^^^^^^^^^
-  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\json\encoder.py", line 432, in _iterencode
-    yield from _iterencode_dict(o, _current_indent_level)
-  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\json\encoder.py", line 406, in _iterencode_dict
-    yield from chunks
-  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\json\encoder.py", line 439, in _iterencode
-    o = _default(o)
-        ^^^^^^^^^^^
-  File "C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\flask\json\provider.py", line 121, in _default
-    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
-TypeError: Object of type ValueError is not JSON serializable
+  File "D:\Semester-8\Projek Khoir\app.py", line 26, in home
+    data = getRedditData(redditUrl=url)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Semester-8\Projek Khoir\core\logic.py", line 51, in getRedditData
+    labelComments = [handleClassification(comment) for comment in bodyComments]
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Semester-8\Projek Khoir\core\svm.py", line 10, in handleClassification
+    outputs = model(**inputs)
+              ^^^^^^^^^^^^^^^
+  File "C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\transformers\models\roberta\modeling_roberta.py", line 1202, in forward
+    outputs = self.roberta(
+              ^^^^^^^^^^^^^
+  File "C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\transformers\models\roberta\modeling_roberta.py", line 805, in forward
+    embedding_output = self.embeddings(
+                       ^^^^^^^^^^^^^^^^
+  File "C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\transformers\models\roberta\modeling_roberta.py", line 109, in forward
+    inputs_embeds = self.word_embeddings(input_ids)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\sparse.py", line 190, in forward
+    return F.embedding(
+           ^^^^^^^^^^^^
+  File "C:\Users\ggm58\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\functional.py", line 2551, in embedding
+    return torch.embedding(weight, input, padding_idx, scale_grad_by_freq, sparse)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Expected tensor for argument #1 'indices' to have one of the following scalar types: Long, Int; but got torch.FloatTensor instead (while checking arguments for embedding)
 
 
 -->

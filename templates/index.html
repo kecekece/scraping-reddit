@@ -1,59 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Scraping Reddit</title>
-    <link rel="stylesheet" href="/static/css/style.css">
-</head>
-<body>
-    <div class="header-container">
-        <h1>APLIKASI DETEKSI HATE SPEECH</h1>
-    </div>
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <link rel="stylesheet" href="/static/css/loader.css" />
+    <link rel="stylesheet" href="/static/sa2/sweetalert2.min.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="header-container">
+        <h1>DETEKSI HATE SPEECH</h1>
+      </div>
 
-    <div class="form-container">
+      <div class="form-container">
         <form id="form-url">
-            <div class="form-group">
-                <input autofocus required type="text" name="url" id="url" placeholder="Masukkan url...">
+          <div class="form-group reset-form">
+            <input
+              autofocus
+              required
+              type="text"
+              name="url"
+              id="url"
+              placeholder="https://www.reddit.com/r/indonesia/comments/..."
+            />
+            <div class="reset-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 50 50">
+                <path d="M 9.15625 6.3125 L 6.3125 9.15625 L 22.15625 25 L 6.21875 40.96875 L 9.03125 43.78125 L 25 27.84375 L 40.9375 43.78125 L 43.78125 40.9375 L 27.84375 25 L 43.6875 9.15625 L 40.84375 6.3125 L 25 22.15625 Z"></path>
+                </svg>
             </div>
-            <div class="form-group">
-                <button>Kirim</button>
-            </div>
+          </div>
+          <div class="form-group">
+            <button>CEK KOMENTAR</button>
+          </div>
         </form>
-    </div>
+      </div>
 
-    <div class="data-container">
-        <div class="sub-data comment-container">
-            <strong id="total-comment">0</strong>
+      <div class="main-data-container">
+        <div class="data-container">
+          <div class="sub-data comment-container">
             <p>Total Komentar</p>
-        </div>
-        <div class="sub-data hate-container">
-            <strong id="hate-data">0</strong>
+            <strong id="total-comment">0</strong>
+          </div>
+          <div class="sub-data hate-container">
             <p>Hate Speech</p>
-        </div>
-        <div class="sub-data non-hate-container">
-            <strong id="non-hate-data">0</strong>
+            <strong id="hate-data">0</strong>
+          </div>
+          <div class="sub-data non-hate-container">
             <p>Non Hate Speech</p>
+            <strong id="non-hate-data">0</strong>
+          </div>
         </div>
-    </div>
 
-    <div class="table-container">
-        <table id="data-scraping">
+        <div class="table-container">
+          <table id="data-scraping">
             <thead>
-                <tr>
-                    <th>No</th>
-                    <th>Author</th>
-                    <th width="50%">Komentar</th>
-                    <th>Waktu dibuat</th>
-                    <th>Label</th>
-                </tr>
+              <tr>
+                <th>Username</th>
+                <th width="50%">Komentar</th>
+                <th>Label</th>
+              </tr>
             </thead>
-            <tbody>
-            </tbody>
-        </table>
+            <tbody></tbody>
+          </table>
+          <div class="loading-container">
+            <!-- From Uiverse.io by Nawsome -->
+            <div class="loader">
+              <div>
+                <ul>
+                  <li>
+                    <svg fill="currentColor" viewBox="0 0 90 120">
+                      <path
+                        d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z"
+                      ></path>
+                    </svg>
+                  </li>
+                  <li>
+                    <svg fill="currentColor" viewBox="0 0 90 120">
+                      <path
+                        d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z"
+                      ></path>
+                    </svg>
+                  </li>
+                  <li>
+                    <svg fill="currentColor" viewBox="0 0 90 120">
+                      <path
+                        d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z"
+                      ></path>
+                    </svg>
+                  </li>
+                  <li>
+                    <svg fill="currentColor" viewBox="0 0 90 120">
+                      <path
+                        d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z"
+                      ></path>
+                    </svg>
+                  </li>
+                  <li>
+                    <svg fill="currentColor" viewBox="0 0 90 120">
+                      <path
+                        d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z"
+                      ></path>
+                    </svg>
+                  </li>
+                  <li>
+                    <svg fill="currentColor" viewBox="0 0 90 120">
+                      <path
+                        d="M90,0 L90,120 L11,120 C4.92486775,120 0,115.075132 0,109 L0,11 C0,4.92486775 4.92486775,0 11,0 L90,0 Z M71.5,81 L18.5,81 C17.1192881,81 16,82.1192881 16,83.5 C16,84.8254834 17.0315359,85.9100387 18.3356243,85.9946823 L18.5,86 L71.5,86 C72.8807119,86 74,84.8807119 74,83.5 C74,82.1745166 72.9684641,81.0899613 71.6643757,81.0053177 L71.5,81 Z M71.5,57 L18.5,57 C17.1192881,57 16,58.1192881 16,59.5 C16,60.8254834 17.0315359,61.9100387 18.3356243,61.9946823 L18.5,62 L71.5,62 C72.8807119,62 74,60.8807119 74,59.5 C74,58.1192881 72.8807119,57 71.5,57 Z M71.5,33 L18.5,33 C17.1192881,33 16,34.1192881 16,35.5 C16,36.8254834 17.0315359,37.9100387 18.3356243,37.9946823 L18.5,38 L71.5,38 C72.8807119,38 74,36.8807119 74,35.5 C74,34.1192881 72.8807119,33 71.5,33 Z"
+                      ></path>
+                    </svg>
+                  </li>
+                </ul>
+              </div>
+              <span>Sedang mengolah data...</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="/static/js/axios.min.js"></script>
+    <script src="/static/sa2/sweetalert2.all.min.js"></script>
     <script src="/static/js/script.js"></script>
-</body>
+  </body>
 </html>

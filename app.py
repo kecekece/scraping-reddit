@@ -1,8 +1,11 @@
 from flask import Flask, render_template, request, jsonify
+# import prawcore
+import re
 
-from logic import getRedditData
+from core.logic import getRedditData
 
 app = Flask(__name__, static_folder='static')
+
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
@@ -11,6 +14,13 @@ def home():
     elif request.method == 'POST':
         dataJson = request.get_json()
         url = dataJson.get('url')
+        
+        URL_REGEX = re.compile(
+            r'^(https?:\/\/)[\w\-\.]+(\.[\w\-]+)+([\/\w\-\.\?\=\&\#]*)*$', re.IGNORECASE
+        )
+        if not URL_REGEX.match(url):
+            return jsonify({"error":"url tidak valid"}), 400
+
         # return jsonify(dataJson)
         try:
             data = getRedditData(redditUrl=url)
@@ -23,6 +33,12 @@ def home():
                 "error": str(e),
                 # "error": e.args,
             }), 405
+        except RuntimeError as e:
+            return jsonify({
+                "error": str(e),
+            }), 500
+        # except prawcore.exceptions.Forbidden as e:
+
 
 if __name__ == '__main__':
     app.run(debug=True)
