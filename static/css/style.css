@@ -172,7 +172,7 @@ body{
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    gap: 10px;
+    /* gap: 10px; */
 }
 
 .table-container table{
@@ -181,9 +181,22 @@ body{
     border-radius: 5px;
     border: 1px solid var(--bd1);
 }
-.table-container table td,th{
+.table-container table tr{
+    /* background: red; */
+    display: flex;
+    align-items: start;
     border-bottom: 1px solid var(--bd1);
+}
+.table-container table tr > *:nth-child(1),
+.table-container table tr > *:nth-child(3){
+    flex:1;
+}
+.table-container table tr > *:nth-child(2){
+    flex:3;
+}
+.table-container table td,th{
     padding: 10px;
+    text-align: left;
 }
 .table-container table th:nth-child(3){
     min-width: 20%;
